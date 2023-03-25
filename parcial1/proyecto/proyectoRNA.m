@@ -84,8 +84,7 @@ w = w1 - diag(diag(w1));
 %input ( valor a encontrar )
 % encontrar Vocal EO
 
-x =  [-1, -1, -1, -1, -1, -1, -1,  1, -1, -1, -1, -1,  1, -1, -1, -1,  1,  1, -1, -1, -1, -1,  1, -1, -1, -1, -1,  1, -1, -1, -1, -1,  1, -1, -1, -1, -1, -1, -1, -1];
-% mul  sum(w * x)
+x =   [-1, -1, -1, -1, -1, -1, -1,  1, -1, -1, -1, -1,  1, -1, -1, 1,  1,  1,  1,  1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
 
 u0 = x;
 c=1;
@@ -96,7 +95,7 @@ ulast = x;
 while (1)
 
   u0 = u0 * w;
-  u0
+  u0;
 
     % aplicar funcion de activacion thresold
 
@@ -116,7 +115,7 @@ while (1)
       fprintf(' encontrado \n');
       u0
       ulast
-      c
+      c;
      break;
   endif
 
